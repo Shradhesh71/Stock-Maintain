@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-hot-toast";
@@ -8,9 +8,9 @@ import Image from "next/image";
 
 export default function addItem() {
   // const router = useRouter();
-  const [loading, setLoading] = React.useState(false);
-  const [buttonDisabled, setButtonDisabled] = React.useState(false);
-  const [user, setUser] = React.useState({
+  const [loading, setLoading] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(false);
+  const [user, setUser] = useState({
     itemName: "",
     number: "",
   });

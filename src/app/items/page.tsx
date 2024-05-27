@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect ,useState} from "react";
 // import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-hot-toast";
@@ -7,8 +7,8 @@ import Link from "next/link";
 
 export default function addItem() {
   // const router = useRouter();
-  const [items, setItems] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   // const Allitems = async () =>{
   //   const res = await axios.get("/api/item/items");
