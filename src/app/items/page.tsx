@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import Link from "next/link";
 
 export default function addItem() {
-  const router = useRouter();
+  // const router = useRouter();
   const [items, setItems] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
 

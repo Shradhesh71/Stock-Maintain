@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function addItem() {
-  const router = useRouter();
+  // const router = useRouter();
   const [loading, setLoading] = React.useState(false);
   const [buttonDisabled, setButtonDisabled] = React.useState(false);
   const [user, setUser] = React.useState({
@@ -21,7 +21,7 @@ export default function addItem() {
       const response = await axios.post("/api/item/addItems", user);
       console.log("Add Item success", response.data);
       toast.success("Add Item success");
-      router.push("/addItems");
+      // router.push("/addItems");
     } catch (error: any) {
       console.log("Add Item failed", error.message);
       toast.error(error.message);
