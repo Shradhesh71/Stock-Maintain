@@ -1,12 +1,11 @@
 "use client";
 import React, { useEffect ,useState} from "react";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import axios from "axios";
-import { toast } from "react-hot-toast";
 import Link from "next/link";
 
 export default function addItem() {
-  // const router = useRouter();
+  const router = useRouter();
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -70,7 +69,7 @@ export default function addItem() {
                       {item.itemName}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-black">
-                      {new Date(item.createdAt).toLocaleDateString()}
+                      {new Date(item.updatedAt).toLocaleDateString()}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-black">
                       {item.number}
