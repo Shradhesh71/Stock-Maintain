@@ -1,11 +1,11 @@
 "use client";
-import React, { useEffect ,useState} from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+// import { useRouter } from "next/navigation";
 import axios from "axios";
 import Link from "next/link";
 
 export default function addItem() {
-  const router = useRouter();
+  // const router = useRouter();
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -58,26 +58,30 @@ export default function addItem() {
                   </th>
                 </tr>
               </thead>
-              {loading ? <h1 className="px-6 py-4 whitespace-nowrap text-lm text-black text-center">Processing..</h1>:
-              <tbody className="bg-white divide-y divide-gray-200">
-                {items.map((item, index) => (
-                  <tr
-                    key={index}
-                    className={index % 2 === 0 ? "bg-red-100" : "bg-red-200"}
-                  >
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-black">
-                      {item.itemName}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-black">
-                      {new Date(item.updatedAt).toLocaleDateString()}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-black">
-                      {item.number}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-}
+              {loading ? (
+                <h1 className="px-6 py-4 whitespace-nowrap text-lm text-black text-center">
+                  Processing..
+                </h1>
+              ) : (
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {items.map((item, index) => (
+                    <tr
+                      key={index}
+                      className={index % 2 === 0 ? "bg-red-100" : "bg-red-200"}
+                    >
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-black">
+                        {item.itemName}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-black">
+                        {new Date(item.updatedAt).toLocaleDateString()}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-black">
+                        {item.number}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              )}
             </table>
           </div>
         </div>
