@@ -2,11 +2,18 @@
 import { useEffect, useState } from "react";
 // import { useRouter } from "next/navigation";
 import axios from "axios";
-import Link from "next/link";
 
 export default function addItem() {
   // const router = useRouter();
-  const [items, setItems] = useState([]);
+
+  // Define an interface for the item data
+  interface Item {
+    itemName: string;
+    updatedAt: string;
+    number: number;
+  }
+
+  const [items, setItems] = useState<Item[]>([]); 
   const [loading, setLoading] = useState(false);
 
   // const Allitems = async () =>{
