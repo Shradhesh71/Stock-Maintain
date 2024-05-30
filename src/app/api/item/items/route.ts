@@ -7,7 +7,7 @@ connect();
 export async function GET(request: NextRequest) {
   try {
     const data = await items.find({});
-    // console.log(data);
+    console.log(data);
     return NextResponse.json({ message: "User found", data: data });
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });
