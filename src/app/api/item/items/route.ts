@@ -1,3 +1,4 @@
+"use server"
 import { connect } from "@/db/dbConfig";
 import items from "@/models/itemModels";
 import { NextRequest, NextResponse } from "next/server";
