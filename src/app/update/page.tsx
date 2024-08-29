@@ -54,7 +54,7 @@ export default function addItem() {
           alt="Your Company"
         />
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight to-blue-500">
-          {loading ? "Processing.." : "Sanjay Tyre House"}
+          {loading ? "Processing.." : "Your Company"}
         </h2>
       </div>
 

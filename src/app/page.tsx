@@ -13,7 +13,7 @@ export default function Home() {
           alt="Your Company"
         />
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight to-blue-500">
-          Sanjay Tyre House
+        Your Company
         </h2>
       </div>
 
